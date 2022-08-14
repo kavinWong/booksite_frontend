@@ -15,7 +15,7 @@ export function getBookList(page, callback, iscreate){
             create().then((res) => {
                 if (res.code == 200) {
                     localStorage.setItem('token',res.data.token);
-                    getBookList(callback, true)
+                    getBookList(page, callback, true)
                 }
             }).catch((err) => console.log(err));
         } else {

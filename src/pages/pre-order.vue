@@ -45,11 +45,11 @@ function submit(){
     <div class="form">
       <div class="item">
         <label for="customer">Customer name:</label>
-        <input type="text" id="customer" placeholder="Customer name" v-model="order.customer" />
+        <input type="text" id="customer" maxlength="50" placeholder="maximum allowed length (50)." v-model="order.customer" />
       </div>
       <div class="item">
         <label for="phone">Phone number:</label>
-        <input type="text" id="phone" placeholder="Phone number" v-model="order.phone" />
+        <input type="text" id="phone"  maxlength="8" placeholder="Phone number with length (8)." v-model="order.phone" />
       </div>
 
       <button class="submit" @click="submit">Submit</button>
@@ -95,6 +95,7 @@ h1{
 input{
   border: #eee 1px solid;
   padding: .3rem .1rem;
+  width: 100%;
 }
 
 .submit{
